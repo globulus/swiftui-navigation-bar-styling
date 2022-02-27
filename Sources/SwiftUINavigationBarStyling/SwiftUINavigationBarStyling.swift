@@ -27,7 +27,7 @@ public struct NavigationBarColorModifier: ViewModifier {
           GeometryReader { geometry in
              Color(self.backgroundColor)
                 .frame(height: geometry.safeAreaInsets.top)
-                .edgesIgnoringSafeArea(.top)
+                .edgesIgnoringSafeArea([.top, .horizontal])
               Spacer()
           }
         }
